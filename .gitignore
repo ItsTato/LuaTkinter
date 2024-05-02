@@ -1,0 +1,8 @@
+.venv/
+.vscode/
+.idea/
+*.pyc
+
+# Example Programs (Not to be released yet)
+whereami.lua
+testwindow.lua
