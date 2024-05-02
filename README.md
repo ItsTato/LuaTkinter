@@ -27,7 +27,7 @@ python -m pip install -r requirements.txt
 # What is LuaTkinter?
 LuaTkinter is designed to be simplistic, easy-to-learn, powerful and functional.
 
-Of course, since LuaTkinter is made on-top of other technologies (`LuaTkinter@Lua` -> `tkinter@Python` -> `Tcl`), performance cannot be guaranteed, however, performance-impact is highly minimal when compared to other frameworks for creating apps, such as Electron.
+Of course, since LuaTkinter is made on-top of other technologies (`LuaTk@Lua` -> `LuaTkinter@Python` -> `tkinter@Python` -> `Tcl/Tk`), performance cannot be guaranteed, however, performance-impact is highly minimal when compared to other frameworks for creating apps, such as Electron.
 
 # Using LuaTkinter
 Using LuaTkinter is as simple as creating  a `.lua` file. No, really!
