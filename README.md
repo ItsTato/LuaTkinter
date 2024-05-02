@@ -1,6 +1,11 @@
 # LuaTkinter
 A simple Python program that allows you to easily write UI-based Applications in Lua.
 
+# WARNING!
+**HOWDY**, Person of the past! LuaTkinter is still unfinished if you are reading this and may be missing key features.
+
+(AS OF NOW) it still lacks the simpliest things, such as Labels and Frmaes. Be warned! It is only public for simplicity and to keep history!
+
 # Important
 
 ## Have Tkinter installed!
