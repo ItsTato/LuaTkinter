@@ -6,9 +6,11 @@ from .Element import Element
 class Window(Element):
 	def __init__(self,_:None) -> None:
 		super().__init__(None)
-		self.Name = "Window"
+		self.Name = "Window" # Assign default Name property.
 
+		# Initialize Tkinter Object.
 		self.__Tk:Tk = Tk()
+
 		# Initialize all variables needed.
 		# No default values are to be defined here.
 		self.__title:str=""
