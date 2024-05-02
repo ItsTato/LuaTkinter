@@ -42,7 +42,7 @@ local MainWindow = new("Window");
 -- Window type elements cannot have a parent defined.
 
 MainWindow.Name = "MainWindow"
--- Leaving an element's name to its default value is NOT recommended and can cause unforseen behavior.
+-- Leaving an element's name to its default value can cause unforseen behavior.
 
 MainWindow.Title = "Example Program";
 -- Change the Window's title using the Title property of the Window class.
