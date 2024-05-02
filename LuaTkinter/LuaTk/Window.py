@@ -1,5 +1,4 @@
 from tkinter import Tk
-from threading import Thread
 
 from .Element import Element
 
