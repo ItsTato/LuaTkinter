@@ -15,6 +15,8 @@ class Window(Element):
 		self.__title:str=""
 		self.__width:int=0
 		self.__height:int=0
+		self.__min_width:int|None=None
+		self.__min_height:int|None=None
 		self.__max_width:int|None=None
 		self.__max_height:int|None=None
 
@@ -25,6 +27,7 @@ class Window(Element):
 		self.Height = 300
 	
 	def __update_geometry(self) -> None: self.__Tk.geometry(f"{self.__width}x{self.__height}")
+	def __update_min_size(self) -> None: self.__Tk.minsize(self.__min_width if isinstance(self.__min_width,int) else 0,self.__min_height if isinstance(self.__min_height,int) else 0)
 	def __update_max_size(self) -> None: self.__Tk.maxsize(self.__max_width if isinstance(self.__max_width,int) else 0,self.__max_height if isinstance(self.__max_height,int) else 0)
 	
 	@property
@@ -51,6 +54,22 @@ class Window(Element):
 		self.__height = new_height
 		self.__update_geometry()
 	
+	@property
+	def MinWidth(self) -> int|None:
+		return self.__min_width
+	@MinWidth.setter
+	def MinWidth(self,new_value:int|None) -> None:
+		self.__min_width = new_value
+		self.__update_min_size()
+	
+	@property
+	def MinHeight(self) -> int|None:
+		return self.__min_height
+	@MinHeight.setter
+	def MinHeight(self,new_value:int|None) -> None:
+		self.__min_height = new_value
+		self.__update_min_size()
+
 	@property
 	def MaxWidth(self) -> int|None:
 		return self.__max_width
