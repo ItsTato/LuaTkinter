@@ -1,9 +1,12 @@
+from typing import Any
+
 class Element:
 	def __init__(self,parent:"Element|None"=None) -> None:
 		self.__parent:Element|None = parent
 		self.__children:list[Element] = []
 
 		self.__name:str
+		self.__Tk:Any
 
 		return
 	
@@ -40,3 +43,6 @@ class Element:
 	@property
 	def children(self) -> list["Element"]:
 		return self.__children
+	@property
+	def TkCls(self) -> Any:
+		return self.__Tk

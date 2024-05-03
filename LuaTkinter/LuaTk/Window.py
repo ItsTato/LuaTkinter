@@ -1,4 +1,5 @@
 from tkinter import Tk
+from typing import Any
 
 from .Element import Element
 
@@ -25,6 +26,9 @@ class Window(Element):
 		self.Title = "Lua Tkinter Window"
 		self.Width = 400
 		self.Height = 300
+	
+	@property
+	def TkCls(self) -> Any: return self.__Tk
 	
 	def __update_geometry(self) -> None: self.__Tk.geometry(f"{self.__width}x{self.__height}")
 	def __update_min_size(self) -> None: self.__Tk.minsize(self.__min_width if isinstance(self.__min_width,int) else 0,self.__min_height if isinstance(self.__min_height,int) else 0)

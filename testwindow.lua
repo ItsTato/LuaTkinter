@@ -22,6 +22,8 @@ MainWindow.MaxWidth = 300;        By default: nil
 MainWindow.MaxHeight = 300;       By Default: nil
 --]]
 
+local HelloLabel = new("Label",MainWindow);
+
 -- Starts the MainWindow loop.
 -- No code can be ran after this is called,
 -- assign anything you need before this.
