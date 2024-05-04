@@ -13,13 +13,11 @@ MainWindow.Name = "MainWindow"
 MainWindow.Title = "Example Program";
 
 --[[ Change window's geometry to a 100x100 box.
-MainWindow.Width = 100;           By default: 400
-MainWindow.Height = 100;          By default: 300
+MainWindow.Size = PxDim.new(400,300);     Default is 400x300
 --]]
 
 --[[ Alter max size of window to being 300x300.
-MainWindow.MaxWidth = 300;        By default: nil
-MainWindow.MaxHeight = 300;       By Default: nil
+MainWindow.MaxSize = PxDim.new(300,300);  Default is no max.
 --]]
 
 local HelloLabel = new("Label",MainWindow);
