@@ -24,7 +24,7 @@ python3 -m pip install -r requirements.txt
 ```
 #### Windows Command
 ```commandline
-py -3.10 -m pip install -r requirements.txt
+py -3 -m pip install -r requirements.txt
 ```
 
 **Note:** In the future, packages such as `requests` may be implemented in the Lua environment as custom globals. These pre-included packages would also be installed with this command in theory.
