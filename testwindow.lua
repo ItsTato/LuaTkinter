@@ -23,6 +23,6 @@ HelloLabel.Text = "Woah! Amazing...";
 HelloLabel.Position = PxDim.new(10,10);
 
 -- Starts the MainWindow loop.
-MainWindow.run();
+MainWindow:Start();
 -- No code can be ran after this is called,
 -- assign anything you need before this.

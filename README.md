@@ -64,7 +64,7 @@ MainWindow.Name = "MainWindow"
 MainWindow.Title = "Example Program";
 -- Change the Window's title using the Title property of the Window class.
 
-MainWindow.run();
+MainWindow:Start();
 -- Starts the MainWindow loop.
 -- No code can be ran after this is called, assign anything you need before this.
 ```
