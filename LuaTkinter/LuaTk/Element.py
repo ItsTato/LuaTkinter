@@ -32,7 +32,6 @@ class Element:
 	def Bind(self,event:str,function:Callable) -> None:
 		if self.TkCls is None: raise Exception("Element is missing a TkCls property.")
 		if not event in self.__binds: raise Exception("Elemenet has no such bind.")
-		for bind in self.__binds[event]:
-			self.TkCls.bind(f"<{bind}>",function)
+		for bind in self.__binds[event]: self.TkCls.bind(f"<{bind}>",function)
 		return
 	

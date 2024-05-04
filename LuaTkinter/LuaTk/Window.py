@@ -2,6 +2,7 @@
 # point for people creating their own classes.
 
 from tkinter import Tk
+from typing import Callable
 
 from .Element import Element
 from .PxDim import PxDim
@@ -20,6 +21,7 @@ class Window(Element):
 		self.__size:PxDim=PxDim(0,0)
 		self.__min_size:PxDim=PxDim(0,0)
 		self.__max_size:PxDim=PxDim(0,0)
+		self.__on_close:Callable=lambda: None
 
 		# All default values are to be set here,
 		# using the class's own properties.
@@ -34,6 +36,14 @@ class Window(Element):
 	def __update_min_size(self) -> None: self.__Tk.minsize(self.__min_size.X,self.__min_size.Y)
 	def __update_max_size(self) -> None: self.__Tk.maxsize(self.__max_size.X,self.__max_size.Y)
 	
+	@property
+	def onClose(self) -> Callable:
+		return self.__on_close
+	@onClose.setter
+	def onClose(self,function:Callable) -> None:
+		self.__on_close = function
+		self.__Tk.protocol("WM_DELETE_WINDOW",function)
+
 	@property
 	def Title(self) -> str:
 		return self.__title
@@ -68,3 +78,7 @@ class Window(Element):
 
 	def Start(self) -> None:
 		self.__Tk.mainloop()
+	
+	def Destroy(self) -> None:
+		self.__Tk.destroy()
+		del self
