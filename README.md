@@ -24,6 +24,8 @@ python -m pip install -r requirements.txt
 
 **Note:** In the future, packages such as `requests` may be implemented in the Lua environment as custom globals. These pre-included packages would also be installed with this command in theory.
 
+**Note:** Everything is subject to change. Nothing is finalized yet.
+
 # What is LuaTkinter?
 LuaTkinter is designed to be simplistic, easy-to-learn, powerful and functional.
 
