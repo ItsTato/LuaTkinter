@@ -2,14 +2,13 @@
 # point for people creating their own classes.
 
 from tkinter import Tk
-from typing import Any
 
 from .Element import Element
 from .PxDim import PxDim
 
 class Window(Element):
 	def __init__(self,_:None) -> None:
-		super().__init__(None)
+		super().__init__()
 		self.Name = "Window" # Assign default Name property.
 
 		# Initialize Tkinter Object.
@@ -28,7 +27,7 @@ class Window(Element):
 		self.Size = PxDim(400,300)
 	
 	@property
-	def TkCls(self) -> Any: return self.__Tk
+	def TkCls(self) -> Tk: return self.__Tk
 	
 	# Methods that interface with the Tkinter class.
 	def __update_geometry(self) -> None: self.__Tk.geometry(f"{self.__size.X}x{self.__size.Y}")
