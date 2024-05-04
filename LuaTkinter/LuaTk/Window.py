@@ -22,6 +22,7 @@ class Window(Element):
 		self.__min_size:PxDim=PxDim(0,0)
 		self.__max_size:PxDim=PxDim(0,0)
 		self.__on_close:Callable=lambda: None
+		self.__has_toolbar:bool=True
 
 		# All default values are to be set here,
 		# using the class's own properties.
@@ -32,17 +33,10 @@ class Window(Element):
 	def TkCls(self) -> Tk: return self.__Tk
 	
 	# Methods that interface with the Tkinter class.
+	def __update_toolbar(self) -> None: self.__Tk.overrideredirect(not self.__has_toolbar)
 	def __update_geometry(self) -> None: self.__Tk.geometry(f"{self.__size.X}x{self.__size.Y}")
 	def __update_min_size(self) -> None: self.__Tk.minsize(self.__min_size.X,self.__min_size.Y)
 	def __update_max_size(self) -> None: self.__Tk.maxsize(self.__max_size.X,self.__max_size.Y)
-	
-	@property
-	def onClose(self) -> Callable:
-		return self.__on_close
-	@onClose.setter
-	def onClose(self,function:Callable) -> None:
-		self.__on_close = function
-		self.__Tk.protocol("WM_DELETE_WINDOW",function)
 
 	@property
 	def Title(self) -> str:
@@ -75,6 +69,22 @@ class Window(Element):
 	def MaxSize(self,new_size:PxDim) -> None:
 		self.__max_size = new_size
 		self.__update_max_size()
+
+	@property
+	def HasToolbar(self) -> bool:
+		return self.__has_toolbar
+	@HasToolbar.setter
+	def HasToolbar(self,new_value:bool) -> None:
+		self.__has_toolbar = new_value
+		self.__update_toolbar()
+	
+	@property
+	def onClose(self) -> Callable:
+		return self.__on_close
+	@onClose.setter
+	def onClose(self,function:Callable) -> None:
+		self.__on_close = function
+		self.__Tk.protocol("WM_DELETE_WINDOW",function)
 
 	def Start(self) -> None:
 		self.__Tk.mainloop()
