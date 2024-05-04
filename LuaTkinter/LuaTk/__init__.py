@@ -7,3 +7,4 @@ from .Label import Label
 
 # Helper classes
 from .Color import Color
+from .PxDim import PxDim
