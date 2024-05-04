@@ -8,7 +8,7 @@ A simple Python program that allows you to easily write UI-based Applications in
 
 # Important
 
-## Have Tkinter installed!
+## [LINUX] Have Tkinter installed!
 If you are using Linux and have a system-provided Python install, make sure you have Tkinter installed!
 
 ```commandline
@@ -18,8 +18,13 @@ sudo apt intall python3-tk
 ## Meet the requirements!
 Make sure you have any and all packages in `requirements.txt` installed!
 
+#### Linux Command
 ```commandline
-python -m pip install -r requirements.txt
+python3 -m pip install -r requirements.txt
+```
+#### Windows Command
+```commandline
+py -3.10 -m pip install -r requirements.txt
 ```
 
 **Note:** In the future, packages such as `requests` may be implemented in the Lua environment as custom globals. These pre-included packages would also be installed with this command in theory.
@@ -38,11 +43,16 @@ Well, actually there's one more step:
 - You have to run this file using the LuaTkinter module!
 
 How? Simple! Like so:
+#### Linux
 ```commandline
-python -m LuaTkinter my_window.lua
+python3 -m LuaTkinter my_window.lua
+```
+#### Windows
+```commandline
+py -3.10 -m LuaTkinter my_window.lua
 ```
 
-**~** `my_window.lua`
+**File ~** `my_window.lua`
 ```lua
 local MainWindow = new("Window");
 -- new(object_name: String, parent: Element | nil)
@@ -59,4 +69,4 @@ MainWindow.run();
 -- No code can be ran after this is called, assign anything you need before this.
 ```
 
-This example program creates a new Window with the title "*Example Program*". You can take this as a template and expand further on it using our documentation.
+This example program creates a new Window with the title "*Example Program*". You can take this as a template and expand further on it using the LuaTkinter documentation. **CURRENTLY NOT AVAILABLE**
