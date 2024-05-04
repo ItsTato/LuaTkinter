@@ -5,8 +5,6 @@ local MainWindow = new("Window");
 
 -- Name the Window.
 MainWindow.Name = "MainWindow"
--- Leaving an element's name to its default value is
--- NOT recommended and can cause unforseen behavior.
 
 -- Change the Window's title using the
 -- Title property of the Window class.
