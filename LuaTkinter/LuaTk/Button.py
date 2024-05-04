@@ -17,8 +17,6 @@ class Button(Element):
 		self.__position:PxDim=PxDim(0,0)
 
 		self.Text = "New Button"
-
-		return
 	
 	@property
 	def TkCls(self) -> ttk.Button: return self.__Tk
@@ -49,14 +47,3 @@ class Button(Element):
 	def Position(self,new_position:PxDim) -> None:
 		self.__position = new_position
 		self.__update_position()
-	
-	def Bind(self,event:str,function:Callable) -> None:
-		match event:
-			case "MouseButton1Click":
-				self.__Tk.bind("<Button-1>",function)
-				self.__Tk.bind("<Return>",function)
-			case "MouseButton2Click":
-				self.__Tk.bind("<Button-3>",function)
-			case "MouseButton3Click":
-				self.__Tk.bind("<Button-2>",function)
-		return

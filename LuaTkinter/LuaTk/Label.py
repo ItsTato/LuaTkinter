@@ -18,8 +18,6 @@ class Label(Element):
 		self.__position:PxDim=PxDim(0,0)
 
 		self.Text = "Blank label"
-
-		return
 	
 	@property
 	def TkCls(self) -> ttk.Label: return self.__Tk
