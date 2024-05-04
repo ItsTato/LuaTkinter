@@ -1,7 +1,7 @@
 local MainWindow = new("Window");
 MainWindow.Name = "MainWindow";
 MainWindow.Title = "Toolbarless App";
-MainWindow.Size = PxDim.new(110,70);
+MainWindow.Size = PxDim.new(130,80);
 MainWindow.MinSize = MainWindow.Size;
 MainWindow.HasToolbar = false;
 
@@ -11,7 +11,7 @@ LabelOne.Text = "I'm Toolbarless!";
 
 local CloseButton = new("Button",MainWindow);
 CloseButton.Text = "Close App";
-CloseButton.Position = PxDim.new(15,35);
+CloseButton.Position = PxDim.new(20,35);
 
 CloseButton:Bind(
 	"MouseButton1Click",
