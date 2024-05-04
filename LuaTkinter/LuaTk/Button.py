@@ -55,4 +55,8 @@ class Button(Element):
 			case "MouseButton1Click":
 				self.__Tk.bind("<Button-1>",function)
 				self.__Tk.bind("<Return>",function)
+			case "MouseButton2Click":
+				self.__Tk.bind("<Button-3>",function)
+			case "MouseButton3Click":
+				self.__Tk.bind("<Button-2>",function)
 		return
