@@ -21,7 +21,7 @@ class Tags:
 	ERROR:Tag = Tag("ERROR",Back.LIGHTRED_EX,Fore.LIGHTWHITE_EX)
 	GOOD:Tag = Tag("GOOD",Back.LIGHTGREEN_EX,Fore.LIGHTWHITE_EX)
 	DONE:Tag = Tag("DONE",Back.LIGHTGREEN_EX,Fore.LIGHTWHITE_EX)
-	INFO:Tag = Tag("INFO",Back.LIGHTBLUE_EX,Fore.LIGHTWHITE_EX)
+	LUATK:Tag = Tag("LUATK",Back.LIGHTBLUE_EX,Fore.LIGHTWHITE_EX)
 	OK:Tag = Tag("OK",Back.GREEN,Fore.LIGHTWHITE_EX)
 
 def createMessage(tags:list[Tag],message:str) -> Callable:

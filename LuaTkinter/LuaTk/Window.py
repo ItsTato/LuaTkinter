@@ -66,5 +66,5 @@ class Window(Element):
 		self.__max_size = new_size
 		self.__update_max_size()
 
-	def run(self) -> None:
+	def Start(self) -> None:
 		self.__Tk.mainloop()
