@@ -3,7 +3,7 @@ from typing import Any
 from os import getcwd, path
 
 from . import LuaTk
-from .LuaTk import Color, Element
+from .LuaTk import Color, Element, PxDim
 
 def Run(file_name:str) -> None:
 	luaRuntime:LuaRuntime = LuaRuntime(unpack_returned_tuples=True)
@@ -41,12 +41,12 @@ def Run(file_name:str) -> None:
 		"GetPackages": __import_or_import_from
 	}
 
-	luaRuntime.globals().python = __python
-
 	luaRuntime.globals().new = __new
 
-	luaRuntime.globals().Color = Color
+	luaRuntime.globals().python = __python
 
+	luaRuntime.globals().Color = Color
+	luaRuntime.globals().PxDim = PxDim
 
 	theoretical_location:str = path.join(getcwd(),file_name)
 	if path.exists(theoretical_location):
