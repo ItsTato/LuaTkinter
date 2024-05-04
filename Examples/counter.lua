@@ -13,7 +13,7 @@ Add1Button.Position = PxDim.new(10,35);
 
 local Add100Button = new("Button",MainWindow);
 Add100Button.Text = "Add 100 to count!";
-Add100Button.Position = PxDim.new(110,35);
+Add100Button.Position = PxDim.new(120,35);
 
 local count = 0;
 CountLabel.Text = "Count is "..count;
