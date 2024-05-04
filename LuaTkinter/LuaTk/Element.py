@@ -23,7 +23,7 @@ class Element:
 				self.TkCls.bind("<Return>",function)
 			case "MouseButton2Click":
 				self.TkCls.bind("<Button-3>",function)
-			case "MouseButton3Click":
+			case "MouseScrollWheelClick":
 				self.TkCls.bind("<Button-2>",function)
 		return
 	
