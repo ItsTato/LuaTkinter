@@ -69,4 +69,4 @@ MainWindow:Start();
 -- No code can be ran after this is called, assign anything you need before this.
 ```
 
-This example program creates a new Window with the title "*Example Program*". You can take this as a template and expand further on it using the LuaTkinter documentation. **CURRENTLY NOT AVAILABLE**
+This example program creates a new Window with the title "*Example Program*". You can take this as a template and expand further on it using the LuaTkinter documentation (**CURRENTLY NOT AVAILABLE**) or you can [check out some examples](https://github.com/ItsTato/LuaTkinter/tree/edge/Examples)!
