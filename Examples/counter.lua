@@ -34,9 +34,11 @@ Add100Button:Bind(
 	end
 );
 
+--[[
 MainWindow.onClose = function()
 	print("Bye bye!");
-	MainWindow:Destroy(); -- Destrou() must be called.
+	MainWindow:Destroy(); -- Destroy() must be called.
 end;
+--]]
 
 MainWindow:Start();
