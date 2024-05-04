@@ -3,8 +3,6 @@ from tkinter import ttk
 from .Element import Element
 from .PxDim import PxDim
 
-from ..Console import Message, Tags
-
 class Label(Element):
 	def __init__(self,parent:Element|None) -> None:
 		super().__init__()

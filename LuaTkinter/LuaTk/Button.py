@@ -1,5 +1,4 @@
 from tkinter import ttk
-from typing import Callable
 
 from .Element import Element
 from .PxDim import PxDim

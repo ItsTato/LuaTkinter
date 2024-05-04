@@ -3,7 +3,6 @@ from typing import Any
 from os import getcwd, path
 
 from . import LuaTk
-from .LuaTk import Color, Element, PxDim
 
 def Run(file_name:str) -> None:
 	luaRuntime:LuaRuntime = LuaRuntime(unpack_returned_tuples=True)
@@ -26,7 +25,7 @@ def Run(file_name:str) -> None:
 			return getattr(__import__(p_name),parts_pname[1])
 		return getattr(__import__(p_name),parts_pname)
 	
-	def __new(name:str,parent:Element|None=None) -> Element:
+	def __new(name:str,parent:LuaTk.Element|None=None) -> LuaTk.Element:
 		try:
 			Object = getattr(LuaTk,name)
 		except AttributeError:
@@ -45,8 +44,8 @@ def Run(file_name:str) -> None:
 
 	luaRuntime.globals().python = __python
 
-	luaRuntime.globals().Color = Color
-	luaRuntime.globals().PxDim = PxDim
+	luaRuntime.globals().Color = LuaTk.Color
+	luaRuntime.globals().PxDim = LuaTk.PxDim
 
 	theoretical_location:str = path.join(getcwd(),file_name)
 	if path.exists(theoretical_location):
