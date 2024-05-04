@@ -52,7 +52,7 @@ python3 -m LuaTkinter my_window.lua
 py -3 -m LuaTkinter my_window.lua
 ```
 
-**File ~** `my_window.lua`
+**File \~** `my_window.lua`
 ```lua
 local MainWindow = new("Window");
 -- new(object_name: String, parent: Element | nil)
