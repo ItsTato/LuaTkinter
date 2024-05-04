@@ -1,6 +1,7 @@
 from lupa import LuaRuntime
 from typing import Any
 from os import getcwd, path
+from platform import system
 
 from . import LuaTk
 
@@ -40,8 +41,11 @@ def Run(file_name:str) -> None:
 		"GetPackages": __import_or_import_from
 	}
 
-	luaRuntime.globals().new = __new
+	__os:str = system() if not system() == "Darwin" else "macOS"
 
+	luaRuntime.globals().OS = __os
+
+	luaRuntime.globals().new = __new
 	luaRuntime.globals().python = __python
 
 	luaRuntime.globals().Color = LuaTk.Color
