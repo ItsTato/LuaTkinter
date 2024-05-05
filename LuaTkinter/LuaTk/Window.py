@@ -23,6 +23,8 @@ class Window(Element):
 		self.__max_size:PxDim=PxDim(0,0)
 		self.__on_close:Callable=lambda: None
 		self.__has_toolbar:bool=True
+		self.__width_resizable:bool=True
+		self.__height_resizable:bool=True
 
 		# All default values are to be set here,
 		# using the class's own properties.
@@ -37,6 +39,7 @@ class Window(Element):
 	def __update_geometry(self) -> None: self.__Tk.geometry(f"{self.__size.X}x{self.__size.Y}")
 	def __update_min_size(self) -> None: self.__Tk.minsize(self.__min_size.X,self.__min_size.Y)
 	def __update_max_size(self) -> None: self.__Tk.maxsize(self.__max_size.X,self.__max_size.Y)
+	def __update_resizable(self) -> None: self.__Tk.resizable(width=self.__width_resizable,height=self.__height_resizable)
 
 	@property
 	def Title(self) -> str:
@@ -85,6 +88,22 @@ class Window(Element):
 	def onClose(self,function:Callable) -> None:
 		self.__on_close = function
 		self.__Tk.protocol("WM_DELETE_WINDOW",function)
+	
+	@property
+	def WidthResizable(self) -> bool:
+		return self.__width_resizable
+	@WidthResizable.setter
+	def WidthResizable(self,new_value:bool) -> None:
+		self.__width_resizable = new_value
+		self.__update_resizable()
+	
+	@property
+	def HeightResizable(self) -> bool:
+		return self.__height_resizable
+	@HeightResizable.setter
+	def HeightResizable(self,new_value:bool) -> None:
+		self.__height_resizable = new_value
+		self.__update_resizable()
 
 	def Start(self) -> None:
 		self.__Tk.mainloop()

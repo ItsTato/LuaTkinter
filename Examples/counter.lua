@@ -2,7 +2,8 @@ local MainWindow = new("Window");
 MainWindow.Name = "MainWindow";
 MainWindow.Title = "Counter App";
 MainWindow.Size = PxDim.new(240,80);
-MainWindow.MinSize = MainWindow.Size;
+MainWindow.WidthResizable = false;
+MainWindow.HeightResizable = false;
 
 local CountLabel = new("Label",MainWindow);
 CountLabel.Position = PxDim.new(10,10);
