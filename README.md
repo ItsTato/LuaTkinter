@@ -17,6 +17,9 @@ If you are using Linux and have a system-provided Python install, make sure you 
 sudo apt install python3-tk
 ```
 
+## Have Python installed!
+Version 3.10 or above is recommended.
+
 ## Meet the requirements!
 Make sure you have any and all packages in `requirements.txt` installed!
 
@@ -39,7 +42,7 @@ Of course, since LuaTkinter is made on top of other technologies (`LuaTk@Lua` ->
 # Using LuaTkinter
 Using LuaTkinter is as simple as creating  a `.lua` file. No, really!
 
-Well, actually there's one more step:
+Well... Actually, there's one more step:
 - You have to run this file using the LuaTkinter module!
 
 How? Simple! Like so:
@@ -58,7 +61,7 @@ local MainWindow = new("Window");
 -- new(object_name: String, parent: Element | nil)
 -- Window type elements cannot have a parent defined.
 
-MainWindow.Name = "MainWindow"
+MainWindow.Name = "MainWindow";
 -- Name the element.
 
 MainWindow.Title = "Example Program";
