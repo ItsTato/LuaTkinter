@@ -18,9 +18,12 @@ MainWindow.Title = "Example Program";
 
 local HelloLabel = new("Label",MainWindow);
 
-HelloLabel.Text = "Woah! Amazing...";
+HelloLabel.Text = "theres a frame in here probably";
 
 HelloLabel.Position = PxDim.new(10,10);
+
+local testFrame = new("Frame",MainWindow);
+testFrame.Position = PxDim.new(20,20);
 
 -- Starts the MainWindow loop.
 MainWindow:Start();

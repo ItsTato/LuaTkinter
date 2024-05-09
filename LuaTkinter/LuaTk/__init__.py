@@ -5,6 +5,7 @@ from .Element import Element
 from .Window import Window
 from .Label import Label
 from .Button import Button
+from .Frame import Frame
 
 # Helper classes
 from .Color import Color
