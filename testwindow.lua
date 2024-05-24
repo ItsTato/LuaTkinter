@@ -1,6 +1,6 @@
 -- Create the MainWindow Element.
-local MainWindow = new("Window");
--- new(object_name: String, parent: Element | None)
+local MainWindow = Element.new("Window");
+-- Element.new(object_name: String, parent: Element | None)
 -- Window type elements cannot have a parent defined.
 
 -- Name the Window.
@@ -16,13 +16,13 @@ MainWindow.Title = "Example Program in "..system.os;
 ---- Alter max size of window to being 300x300.
 -- MainWindow.MaxSize = PxDim.new(300,300);  Default is no max.
 
-local HelloLabel = new("Label",MainWindow);
+local HelloLabel = Element.new("Label",MainWindow);
 
 HelloLabel.Text = "theres a frame in here probably";
 
 HelloLabel.Position = PxDim.new(10,10);
 
-local testFrame = new("Frame",MainWindow);
+local testFrame = Element.new("Frame",MainWindow);
 testFrame.Position = PxDim.new(20,20);
 
 MainWindow.onClose = function()

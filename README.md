@@ -57,8 +57,8 @@ py -3 -m LuaTkinter my_window.lua
 
 **File \~** `my_window.lua`
 ```lua
-local MainWindow = new("Window");
--- new(object_name: String, parent: Element | nil)
+local MainWindow = Element.new("Window");
+-- Element.new(object_name: String, parent: Element | nil)
 -- Window type elements cannot have a parent defined.
 
 MainWindow.Name = "MainWindow";
@@ -72,4 +72,4 @@ MainWindow:Start();
 -- No code can be run after this is called, assign anything you need before this!
 ```
 
-This example program creates a new Window with the title "*Example Program*". You can take this as a template and expand further on it using the LuaTkinter documentation (**CURRENTLY NOT AVAILABLE**) or you can [check out some examples](https://github.com/ItsTato/LuaTkinter/tree/edge/Examples)!
+This example program creates a new Window with the title "*Example Program*". You can take this as a template and expand further on it using the LuaTkinter documentation (**CURRENTLY NOT AVAILABLE**) or you can also [check out some examples](https://github.com/ItsTato/LuaTkinter/tree/edge/Examples) made for your convenience.

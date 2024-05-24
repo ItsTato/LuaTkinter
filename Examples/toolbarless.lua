@@ -1,13 +1,13 @@
-local MainWindow = new("Window");
+local MainWindow = Element.new("Window");
 MainWindow.Name = "MainWindow";
 MainWindow.Title = "Toolbarless App";
 MainWindow.HasToolbar = false;
 
-local LabelOne = new("Label",MainWindow);
+local LabelOne = Element.new("Label",MainWindow);
 LabelOne.Position = PxDim.new(10,10);
 LabelOne.Text = "I'm Toolbarless!";
 
-local CloseButton = new("Button",MainWindow);
+local CloseButton = Element.new("Button",MainWindow);
 CloseButton.Text = "Close App";
 
 if system:isWindows() then

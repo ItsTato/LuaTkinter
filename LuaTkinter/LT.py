@@ -52,9 +52,13 @@ def Run(file_name:str) -> None:
 		"isLinux": __isLinux
 	}
 
+	__element:dict[str,Callable] = {
+		"new": __new
+	}
+
 	luaRuntime.globals().system = __system
 
-	luaRuntime.globals().new = __new
+	luaRuntime.globals().Element = __element
 	luaRuntime.globals().python = __python
 
 	luaRuntime.globals().Color = LuaTk.Color
