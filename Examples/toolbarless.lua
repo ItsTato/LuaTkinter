@@ -10,7 +10,7 @@ LabelOne.Text = "I'm Toolbarless!";
 local CloseButton = new("Button",MainWindow);
 CloseButton.Text = "Close App";
 
-if OS == "Windows" then
+if system:isWindows() then
 	MainWindow.Size = PxDim.new(110,70);
 	CloseButton.Position = PxDim.new(15,35);
 else
@@ -26,7 +26,7 @@ CloseButton:Bind(
 	end
 );
 
-MainWindow.onClose = function() -- This prevents Alt+F4 as well! :3
+MainWindow.onClose = function()
 	print("\nTo close this Window please use");
 	print("the close button on the app instead!\n");
 end;

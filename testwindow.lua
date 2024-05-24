@@ -8,7 +8,7 @@ MainWindow.Name = "MainWindow";
 
 -- Change the Window's title using the
 -- Title property of the Window class.
-MainWindow.Title = "Example Program";
+MainWindow.Title = "Example Program in "..system.os;
 
 ---- Change window's geometry to a 100x100 box.
 -- MainWindow.Size = PxDim.new(400,300);     Default is 400x300
@@ -24,6 +24,14 @@ HelloLabel.Position = PxDim.new(10,10);
 
 local testFrame = new("Frame",MainWindow);
 testFrame.Position = PxDim.new(20,20);
+
+MainWindow.onClose = function()
+    print("Bye :C");
+
+    -- If MainWindow is not destroyed it will not actually
+    -- close your application! Beware!
+    MainWindow:Destroy();
+end;
 
 -- Starts the MainWindow loop.
 MainWindow:Start();

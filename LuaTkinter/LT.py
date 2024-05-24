@@ -1,5 +1,5 @@
 from lupa import LuaRuntime
-from typing import Any
+from typing import Any, Callable
 from os import getcwd, path
 from platform import system
 
@@ -34,16 +34,25 @@ def Run(file_name:str) -> None:
 			exit(1)
 		return Object(parent)
 
-	__python:dict = {
+	__python:dict[str,Callable] = {
 		"GetModule": __import_or_import_from,
 		"GetPackage": __import_or_import_from,
 		"GetModules": __import_or_import_from,
 		"GetPackages": __import_or_import_from
 	}
 
-	__os:str = system() if not system() == "Darwin" else "macOS"
+	def __is(_,name:str) -> bool: return system().lower() == name.lower()
+	def __isWindows(_) -> bool: return system() in ["dos","win","nt"]
+	def __isLinux(_) -> bool: return system() in ["Linux"]
 
-	luaRuntime.globals().OS = __os
+	__system:dict[str,Callable|str] = {
+		"os": system(),
+		"is": __is,
+		"isWindows": __isWindows,
+		"isLinux": __isLinux
+	}
+
+	luaRuntime.globals().system = __system
 
 	luaRuntime.globals().new = __new
 	luaRuntime.globals().python = __python
