@@ -8,7 +8,7 @@ MainWindow.Name = "MainWindow";
 
 -- Change the Window's title using the
 -- Title property of the Window class.
-MainWindow.Title = "Example Program in "..system.os;
+MainWindow.Title = "Example Program in "..System.OS;
 
 ---- Change window's geometry to a 100x100 box.
 -- MainWindow.Size = PxDim.new(400,300);     Default is 400x300
@@ -16,20 +16,18 @@ MainWindow.Title = "Example Program in "..system.os;
 ---- Alter max size of window to being 300x300.
 -- MainWindow.MaxSize = PxDim.new(300,300);  Default is no max.
 
-local HelloLabel = Element.new("Label",MainWindow);
-
-HelloLabel.Text = "theres a frame in here probably";
-
-HelloLabel.Position = PxDim.new(10,10);
-
 local testFrame = Element.new("Frame",MainWindow);
 testFrame.Position = PxDim.new(20,20);
+
+local testLabel = Element.new("Label",testFrame);
+testLabel.Position = PxDim.new(10,10);
+testLabel.Text = "im in a frame!\npos is: "..testLabel.Position;
 
 MainWindow.onClose = function()
     print("Bye :C");
 
     -- If MainWindow is not destroyed it will not actually
-    -- close your application! Beware!
+    -- close your application. Beware!
     MainWindow:Destroy();
 end;
 

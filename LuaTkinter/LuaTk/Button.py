@@ -1,6 +1,7 @@
 from tkinter import ttk
 
 from .Element import Element
+from .Window import Window
 from .PxDim import PxDim
 
 class Button(Element):
@@ -44,5 +45,9 @@ class Button(Element):
 		return self.__position
 	@Position.setter
 	def Position(self,new_position:PxDim) -> None:
-		self.__position = new_position
+		if self.__parent is not None:
+			if not isinstance(self.__parent,Window):
+				self.__position = new_position+self.__parent.Position #type:ignore
+		else:
+			self.__position = new_position
 		self.__update_position()

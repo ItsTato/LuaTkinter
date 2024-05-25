@@ -1,3 +1,3 @@
-local getcwd = python:GetPackages({ "getcwd" }, "os");
+local getcwd = Python:GetPackages({ "getcwd" }, "os");
 
 print("Current working directory is: "..getcwd());

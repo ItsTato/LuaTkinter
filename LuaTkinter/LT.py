@@ -46,6 +46,7 @@ def Run(file_name:str) -> None:
 	def __isLinux(_) -> bool: return system() in ["Linux"]
 
 	__system:dict[str,Callable|str] = {
+		"OS": system(),
 		"os": system(),
 		"is": __is,
 		"isWindows": __isWindows,
@@ -56,10 +57,10 @@ def Run(file_name:str) -> None:
 		"new": __new
 	}
 
-	luaRuntime.globals().system = __system
+	luaRuntime.globals().System = __system
 
 	luaRuntime.globals().Element = __element
-	luaRuntime.globals().python = __python
+	luaRuntime.globals().Python = __python
 
 	luaRuntime.globals().Color = LuaTk.Color
 	luaRuntime.globals().PxDim = LuaTk.PxDim
