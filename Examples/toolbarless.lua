@@ -10,7 +10,7 @@ LabelOne.Text = "I'm Toolbarless!";
 local CloseButton = Element.new("Button",MainWindow);
 CloseButton.Text = "Close App";
 
-if system:isWindows() then
+if System:isWindows() then
 	MainWindow.Size = PxDim.new(110,70);
 	CloseButton.Position = PxDim.new(15,35);
 else
