@@ -8,6 +8,9 @@ Howdy, person! LuaTkinter is still unfinished and if you are reading this it may
 
 Currently, it still lacks the simplest things, such as Frames. Be warned! The GitHub repo is only public for simplicity and to keep history!
 
+## [Ignore] Planned syntax change
+{Element}.MouseButton1Click:Bind({function});
+
 # Important
 
 ## [LINUX] Have Tkinter installed!
