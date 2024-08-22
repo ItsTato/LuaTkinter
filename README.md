@@ -1,12 +1,13 @@
 # LuaTkinter
 A simple Python program that allows you to easily write UI-based Applications in Lua.
 
-**Note:** Everything is subject to change. Nothing is finalized yet.
+> [!CAUTION]
+> Everything is subject to change. Nothing is finalized yet.
 
-# WARNING!
-Howdy, person! LuaTkinter is still unfinished and if you are reading this it may still be missing key features.
-
-Currently, it still lacks the simplest things, such as Frames. Be warned! The GitHub repo is only public for simplicity and to keep history!
+> [!WARNING]
+> Howdy, person! LuaTkinter is still unfinished and if you are reading this it may still be missing key features.
+> 
+> Currently, it still lacks the simplest things, such as Frames. Be warned! The GitHub repo is only public for simplicity and to keep history!
 
 # Important
 
@@ -55,8 +56,7 @@ python3 -m LuaTkinter my_window.lua
 py -3 -m LuaTkinter my_window.lua
 ```
 
-**File \~** `my_window.lua`
-```lua
+```lua title="my_window.lua"
 local MainWindow = Element.new("Window");
 -- Element.new(object_name: String, parent: Element | nil)
 -- Window type elements cannot have a parent defined.
