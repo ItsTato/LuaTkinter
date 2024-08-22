@@ -4,7 +4,7 @@ MainWindow.Title = "Counter App";
 MainWindow.WidthResizable = false;
 MainWindow.HeightResizable = false;
 
-if system:isWindows() then
+if System:isWindows() then
 	MainWindow.Size = PxDim.new(240,80);
 else
 	MainWindow.Size = PxDim.new(260,80);

@@ -47,7 +47,8 @@ class Button(Element):
 	def Position(self,new_position:PxDim) -> None:
 		if self.__parent is not None:
 			if not isinstance(self.__parent,Window):
+				print(":C")
 				self.__position = new_position+self.__parent.Position #type:ignore
-		else:
-			self.__position = new_position
+			else:
+				self.__position = new_position
 		self.__update_position()

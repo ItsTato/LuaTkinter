@@ -9,6 +9,9 @@ A simple Python program that allows you to easily write UI-based Applications in
 > 
 > Currently, it still lacks the simplest things, such as Frames. Be warned! The GitHub repo is only public for simplicity and to keep history!
 
+## [Ignore] Planned syntax change
+{Element}.MouseButton1Click:Bind({function});
+
 # Important
 
 ## [LINUX] Have Tkinter installed!

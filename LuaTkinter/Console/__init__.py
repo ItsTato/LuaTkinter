@@ -1,2 +1,1 @@
-from . import Message
-from .Message import Tags
+from .Message import Tags, createMessage
