@@ -4,7 +4,7 @@ class PxDim:
 		self.__y:int = y
 		return
 	
-	def __str__(self) -> str: return f"{self.__x}x{self.__y}"
+	def __str__(self) -> str: return f"PxDim.new({self.__x}x{self.__y});"
 	def __add__(self,other:"PxDim") -> "PxDim": return PxDim(self.X+other.X,self.Y+other.Y)
 	
 	def new(x:int,y:int) -> "PxDim": # type: ignore

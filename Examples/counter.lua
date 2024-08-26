@@ -3,12 +3,7 @@ MainWindow.Name = "MainWindow";
 MainWindow.Title = "Counter App";
 MainWindow.WidthResizable = false;
 MainWindow.HeightResizable = false;
-
-if System:isWindows() then
-	MainWindow.Size = PxDim.new(240,80);
-else
-	MainWindow.Size = PxDim.new(260,80);
-end;
+MainWindow.Size = PxDim.new(235,70);
 
 local CountLabel = Element.new("Label",MainWindow);
 CountLabel.Position = PxDim.new(10,10);

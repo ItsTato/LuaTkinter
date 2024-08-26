@@ -1,4 +1,4 @@
-from tkinter import ttk
+import tkinter as tk
 
 from .Element import Element
 from .PxDim import PxDim
@@ -8,14 +8,14 @@ class Frame(Element):
 		super().__init__()
 		self.Name = "Frame"
 
-		self.__Tk:ttk.Frame = ttk.Frame()
+		self.__Tk:tk.Frame = tk.Frame()
 
 		self.__parent:Element|None=parent
 		if parent is not None: self.Parent = parent
 		self.__position:PxDim=PxDim(0,0)
 	
 	@property
-	def TkCls(self) -> ttk.Frame: return self.__Tk
+	def TkCls(self) -> tk.Frame: return self.__Tk
 
 	def __update_position(self) -> None: self.__Tk.place(x=self.__position.X,y=self.__position.Y)
 

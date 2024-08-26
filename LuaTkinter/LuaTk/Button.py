@@ -1,4 +1,4 @@
-from tkinter import ttk
+import tkinter as tk
 
 from .Element import Element
 from .Window import Window
@@ -9,7 +9,7 @@ class Button(Element):
 		super().__init__()
 		self.Name = "Button"
 
-		self.__Tk:ttk.Button = ttk.Button()
+		self.__Tk:tk.Button = tk.Button()
 
 		self.__parent:Element|None=parent
 		if parent is not None: self.Parent = parent
@@ -19,7 +19,7 @@ class Button(Element):
 		self.Text = "New Button"
 	
 	@property
-	def TkCls(self) -> ttk.Button: return self.__Tk
+	def TkCls(self) -> tk.Button: return self.__Tk
 
 	def __update_text(self) -> None: self.__Tk.config(text=self.__text)
 	def __update_position(self) -> None: self.__Tk.place(x=self.__position.X,y=self.__position.Y)

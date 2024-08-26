@@ -1,4 +1,4 @@
-from tkinter import ttk
+import tkinter as tk
 
 from .Element import Element
 from .PxDim import PxDim
@@ -8,7 +8,7 @@ class Label(Element):
 		super().__init__()
 		self.Name = "Label"
 
-		self.__Tk = ttk.Label()
+		self.__Tk:tk.Label = tk.Label()
 
 		self.__parent:Element|None=parent
 		if parent is not None: self.Parent = parent
@@ -18,7 +18,7 @@ class Label(Element):
 		self.Text = "Blank label"
 	
 	@property
-	def TkCls(self) -> ttk.Label: return self.__Tk
+	def TkCls(self) -> tk.Label: return self.__Tk
 
 	def __update_text(self) -> None: self.__Tk.config(text=self.__text)
 	def __update_position(self) -> None: self.__Tk.place(x=self.__position.X,y=self.__position.Y)

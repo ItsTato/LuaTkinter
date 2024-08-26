@@ -21,7 +21,7 @@ testFrame.Position = PxDim.new(20,20);
 
 local testLabel = Element.new("Label",testFrame);
 testLabel.Position = PxDim.new(10,10);
-testLabel.Text = "im in a frame!\npos is: "..testLabel.Position;
+testLabel.Text = "im in a frame!\npos is: X:"..testLabel.Position.X.." Y:"..testLabel.Position.Y;
 
 MainWindow.onClose = function()
     print("Bye :C");

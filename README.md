@@ -36,7 +36,8 @@ python3 -m pip install -r requirements.txt
 py -3 -m pip install -r requirements.txt
 ```
 
-**Note:** In the future, packages such as `requests` may be implemented in the Lua environment as custom globals. These pre-included packages would also be installed with this command (in theory).
+> [!NOTE]
+> In the future, packages such as `requests` may be implemented in the Lua environment as custom globals. These pre-included packages would also be installed with this command (in theory).
 
 # What is LuaTkinter?
 LuaTkinter is designed to be a simplistic, easy-to-learn, powerful, and functional framework for building desktop applications in Lua.
